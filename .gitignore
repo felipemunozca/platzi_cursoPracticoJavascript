@@ -105,3 +105,6 @@ dist
 
 # Configuracion peacock de VS Code
 .vscode
+
+# Codigo js de prueba
+.figuras_codigo_base.js

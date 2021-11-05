@@ -1,0 +1,16 @@
+/*=====================================
+==ESTILOS PARA FIGURAS.HTML==
+=====================================*/
+
+@media (max-width: 900px) {
+    
+    .figuras-container .calculos-container {
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 660px) {
+    .figuras-container .calculos-container {
+        max-width: 95%;
+    }
+}
