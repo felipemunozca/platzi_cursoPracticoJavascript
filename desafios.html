@@ -32,25 +32,28 @@
             </nav>
         </header>
 
-        <div class="cabecera">
-            <h1>Figuras Geométricas</h1>
-            <p>Este es el primer taller del curso práctico de JavaScript</p> 
+        <div class="cabecera-desa">
+            <h1>Desafíos del Curso</h1>
+            <p>En esta sección se publicarán los diversos desafíos que nos dará el profesor del cursos</p> 
         </div>
 
         <div class="container">
-            <div class="row justify-content-evenly">
+            <div class="row justify-content-center">
 
-                <div class="col-12 col-md-4">
+                <!--inicio mensaje desafio triangulo-->
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="cuadro-fig">
-                        <h4>Desafió</h4>
+                        <h4>Desafió N°1</h4>
+                        <p>En este ejercicio debes crear una función para calcular la altura de un triángulo isósceles.</p>
                         <p><i class="bi bi-check-lg"></i> La función debe recibir, como parámetros, la longitud de los 3 lados del triángulo.</p>
                         <p><i class="bi bi-check-lg"></i> La función debe validar que la longitud de los 3 lados del triángulo corresponden a un triángulo isósceles.</p>
                         <p><i class="bi bi-check-lg"></i> La función debe retornar la altura del triángulo.</p>
                     </div>
                 </div>
-                
+                <!--cierre mensaje desafio triangulo-->
+
                 <!--inicio codigo triangulo-->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="cuadro-fig">
                         <div class="icono">
                             <img src="./assets/triangle-half.svg">
@@ -95,6 +98,53 @@
                 <!--cierre codigo triangulo-->
 
             </div>
+
+            <div class="div-separacion">
+                <p class="linea-separacion"></p>
+            </div>
+
+            <div class="row justify-content-center">
+                <!--inicio mensaje desafio triangulo-->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="cuadro-desc">
+                        <h4>Desafió N°2</h4>
+                        <p>Nuestros clientes están muy felices de poder calcular el precio final de sus productos después del descuento, pero la tienda tiene una nueva solicitud: implementar descuentos con cupones.</p>
+                        <p>Cupones disponibles:</p>
+                        <ul>
+                            <li>JuanDC_es_Batman</li>
+                            <li>pero_no_le_digas_a_nadie</li>
+                            <li>es_un_secreto</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--cierre mensaje desafio triangulo-->
+
+                <!--inicio codigo triangulo-->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="cuadro-desc">
+
+                        <div class="titulo-desc">
+                            <h4>Calcula el precio a pagar de tus productos con descuento</h4>
+                        </div>
+                        <div class="cuerpo">
+                            <label class="textos-desc" for="inputPrecio">Escribe el precio del producto:</label>
+                            <input class="form-control input-desc" id="inputPrecio" type="number" required>
+                            <label class="textos-desc" for="inputCupon">Escribe el cupón de descuento para tu producto:</label>
+                            <input class="form-control input-desc" id="inputCupon" type="text" required>
+                            <button class="btn btn-primary" type="button" onclick="calcularPrecioMenosCupon()">
+                                Calcular el precio con descuentos
+                            </button>
+                        </div>
+                        <div class="pie-pagina-desc">
+                            <p>Resultado:</p>
+                            <p id="resultadoPrecioCupon">></p>
+                        </div>
+
+                    </div>
+                </div>
+                <!--cierre codigo triangulo-->
+
+            </div>
         </div>
 
         <footer>
@@ -106,5 +156,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         
         <script src="./figuras.js"></script>
+        <script src="./descuentos.js"></script>
     </body>
 </html>

@@ -163,6 +163,46 @@ body{
         margin-top: 3px;
         margin-bottom: 3px;
     }
+    .pie-pagina-desc {
+        padding: 15px 15px 15px 15px;
+        background-color: #e6e9ed;
+        margin-top: 10px;
+    }
 /********************************/
 /* SECCION FOOTER DESCUENTOS.JS */
 /********************************/
+
+/********************************/
+/* SECCION DESAFIOS.HTML */
+/********************************/
+.cabecera-desa {
+    width: 100%;
+    height: 40%;
+    display: grid;
+    background-color: #8f0808;
+}
+.cabecera-desa h1 {
+    font-family: 'Roboto mono', monospace;
+    font-size: 35px;
+    font-weight: 700px;
+    letter-spacing: 5px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.cabecera-desa p {
+    font-size: 20px;
+    font-weight: 400px;
+    color: white;
+    text-align: center;
+}
+.div-separacion {
+    text-align: center;
+    align-items: center;
+}
+.linea-separacion{
+    background-color: #030000;
+    height: 3px;
+    max-width: 100%;
+    margin-top: 20px;
+}
