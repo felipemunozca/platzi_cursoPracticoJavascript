@@ -9,9 +9,9 @@ body{
 }
 
 
-/************************/
-/* SECCION HEADER */
-/************************/
+/*****************************/
+/* SECCION HEADER FIGURAS.JS */
+/*****************************/
     .cabecera {
         width: 100%;
         height: 30%;
@@ -34,13 +34,12 @@ body{
         text-align: center;
     }
 
-
-/************************/
-/* SECCION MAIN */
-/************************/
-    .cuadro {
+/***************************/
+/* SECCION MAIN FIGURAS.JS */
+/***************************/
+    .cuadro-fig {
         border: 2px solid rgba(0,0,0,.125);
-        padding: 15px;
+        padding: 12px;
         margin-top: 20px;
         margin-bottom: 20px;
         border-radius: 5px;
@@ -54,7 +53,7 @@ body{
         height: 80px;
         margin-bottom: 20px;
     }
-    .titulo {
+    .titulo-fig {
         width: 100%;
         background-color: #e6e9ed;
         padding: 10px 10px 10px 10px;
@@ -75,7 +74,7 @@ body{
         margin-top: 3px;
         margin-bottom: 3px;
     }
-    .pie-pagina {
+    .pie-pagina-fig {
         padding: 15px 15px 15px 15px;
         background-color: #e6e9ed;
         margin-top: 10px;
@@ -95,9 +94,9 @@ body{
         display: inline;
     }
 
-/************************/
-/* SECCION FOOTER */
-/************************/
+/*****************************/
+/* SECCION FOOTER FIGURAS.JS */
+/*****************************/
     footer {
         width: 100%;
         height: 90px;
@@ -110,6 +109,60 @@ body{
     }
 
 
-/************************/
-/* DESAFIOS */
-/************************/
+/********************************/
+/* SECCION HEADER DESCUENTOS.JS */
+/********************************/
+    .cabecera-desc {
+        width: 100%;
+        height: 40%;
+        display: grid;
+        background-color: #132796;
+    }
+    .cabecera-desc h1 {
+        font-family: 'Roboto mono', monospace;
+        font-size: 35px;
+        font-weight: 700px;
+        letter-spacing: 5px;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .cabecera-desc p {
+        font-size: 20px;
+        font-weight: 400px;
+        color: white;
+        text-align: center;
+    }
+
+/******************************/
+/* SECCION MAIN DESCUENTOS.JS */
+/******************************/
+    .cuadro-desc {
+        border: 2px solid rgba(0,0,0,.125);
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        height: 93%;
+    }
+    .titulo-desc {
+        width: 100%;
+        background-color: #e6e9ed;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    }
+    .textos-desc {
+        padding: 8px 10px 8px 10px;
+    }
+    .input-desc {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .btn-primary {
+        width: 100%;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+/********************************/
+/* SECCION FOOTER DESCUENTOS.JS */
+/********************************/
