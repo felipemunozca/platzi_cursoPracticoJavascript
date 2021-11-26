@@ -55,7 +55,49 @@
             </div>
         </nav>
     </header>
-    <h1>Promedio</h1>
+
+    <div class="cabecera-taller3">
+        <h1>Promedio, moda y mediana</h1>
+        <p>Este es el tercer taller del curso práctico de JavaScript</p> 
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+                <div class="cuadro-taller3">
+
+                    <div class="titulo-taller3">
+                        <h4>Calcula cual es el <strong>promedio</strong> desde una lista de numeros</h4>
+                    </div>
+                    <div class="cuerpo">
+
+                        <label class="textos-taller3" for="inputPromedio">Escribe un listado de numeros:</label>
+                        <p class="textos-taller3"><i>Los números pueden estar repetidos, desordenados. Solo deben ser separados por una coma (,)</i></p>
+                        <input class="form-control input-taller3" id="inputPromedio" type="text" placeholder="Ej: 200, 100, 500, 50" >
+                        <button class="btn btn-outline-primary" type="button" onclick="desafioCalcularPromedio()">
+                            Calcular el promedio
+                        </button>
+                        <button class="btn btn-outline-primary" type="button" onclick="limpiarInput()">
+                            Reiniciar
+                        </button>
+                    </div>
+                    <div class="pie-pagina-taller3">
+                        <p>Resultados</p>
+                        <div class="resultados-container">
+                            <p class="resultados-textos" id="">El promedio es: </p>
+                            <p class="resultados-numeros" id="resultadoPromedio">...</p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Curso Práctico de JavaScript - Platzi - Noviembre 2021.</p>
+    </footer>
     
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
