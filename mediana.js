@@ -56,6 +56,7 @@ if (esPar(lista1.length)) {
  });
  console.log(numbers);
 
+
  function desafioCalcularMediana() {
 
     //Se captura los datos del html y se guardan los valores dentro de una variable
@@ -97,5 +98,10 @@ if (esPar(lista1.length)) {
     //Enviamos los resultados obtenidos a la pagina html para su visualizacion
     const mostrarResultado = document.getElementById("resultadoMediana");
     
-    mostrarResultado.innerText = "La mediana es de: " + medianaDesafio;
+    mostrarResultado.innerText = " " + medianaDesafio;
 }
+
+function limpiarInput() {
+    document.getElementById("inputMediana").value = "";
+    document.getElementById("resultadoMediana").value = "...";
+};
