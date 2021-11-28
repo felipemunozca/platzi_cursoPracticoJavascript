@@ -219,9 +219,14 @@ body{
     margin-bottom: 5px;
 }
 .pie-pagina-taller3 {
-    padding: 15px 15px 15px 15px;
+    padding: 10px 10px 10px 10px;
     background-color: #e6e9ed;
-    margin-top: 10px;
+    margin-top: 8px;
+}
+.resultados-taller3 {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 /********************************/
@@ -257,4 +262,37 @@ body{
     height: 3px;
     max-width: 100%;
     margin-top: 20px;
+}
+.imagen-formula {
+    width: 100%;
+}
+/*
+.input-group-text {
+    width: 25px;
+}
+*/
+.fila-notas {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.bajar-size {
+    font-size: 14px;
+}
+.reparar-espacio > p {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/**************************
+MEDIA QUERIES
+**************************/
+@media (max-width: 770px) {
+    .reparar-espacio > p {
+        padding-bottom: 40px;
+    }
 }

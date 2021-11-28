@@ -23,9 +23,33 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="menuEjercicios">
                         <div class="navbar-nav">
-                            <a class="nav-link" href="figuras.html">Figuras Geométricas</a>
-                            <a class="nav-link" href="descuentos.html">Descuentos</a>
-                            <a class="nav-link active"  aria-current="page"href="desafios.html">Desafíos</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Taller 1
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                    <li><a class="nav-link" aria-current="page" href="figuras.html">Figuras Geométricas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Taller 2
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                    <li><a class="nav-link" href="descuentos.html">Descuentos</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Taller 3
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                    <li><a class="nav-link" href="promedio.html">Promedio</a></li>
+                                    <li><a class="nav-link" href="moda.html">Moda</a></li>
+                                    <li><a class="nav-link" href="mediana.html">Mediana</a></li>
+                                </ul>
+                            </li>
+                            <a class="nav-link active" href="desafios.html">Desafíos</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +63,6 @@
 
         <div class="container">
             <div class="row justify-content-center">
-
                 <!--inicio mensaje desafio triangulo-->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="cuadro-fig">
@@ -96,7 +119,6 @@
                     </div>
                 </div>
                 <!--cierre codigo triangulo-->
-
             </div>
 
             <div class="div-separacion">
@@ -104,7 +126,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <!--inicio mensaje desafio precio con descuentos-->
+                <!--inicio mensaje desafio precio con descuentos -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="cuadro-desc">
                         <h4>Desafió N°2</h4>
@@ -143,8 +165,117 @@
                     </div>
                 </div>
                 <!--cierre codigo precio con descuentos-->
-
             </div>
+
+            <div class="div-separacion">
+                <p class="linea-separacion"></p>
+            </div>
+
+            <div class="row justify-content-center">
+                <!--inicio mensaje desafio promedio ponderado -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="cuadro-desc">
+                        <h4>Desafió N°3</h4>
+                        <p>Promedio ponderado.</p>
+                        <p>Para este desafió hay que trabajar con la media aritmética ponderada. Este es un promedio muy similar a la media aritmética, pero nos permite definir también el peso, importancia o relevancia de cada elemento en nuestro conjunto de números.</p>
+                        <p>Un caso de uso de la media ponderada es el cálculo de notas académicas cuando cada materia o asignatura otorga diferentes “créditos”.</p>
+                        <p>Esta es su fórmula:</p>
+                        <img class="imagen-formula" src="./assets/formula.jpg" alt="">
+                    </div>
+            </div>
+                <!--cierre mensaje desafio promedio ponderado-->
+
+            <!--inicio codigo promedio ponderado-->
+            <div class="col-12 col-md-6 col-lg-5">
+                    <div class="cuadro-desc">
+                        <div class="titulo-desc">
+                            <h4>Calcula el promedio de notas de un alumno.</h4>
+                        </div>
+                        <form id="formulario-ponderado">
+                            <p class="textos-taller3"><i>Instrucciones: recuerda escribir las notas separando los decimales con un punto (.) y el valor ponderado no puede ser mayor al 100%. Si tienes menos de 6 notas, puedes dejar los demás espacios en blanco y calcular de todos modos.</i></p>
+                            <div class="cuerpo">
+                                <div class="row fila-notas">
+                                    <div class="col-md-6">
+                                        <label for="nota1" class="form-label bajar-size">Nota 1</label>
+                                        <input type="number" class="form-control" id="nota1" placeholder="Ej: 4.0">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ponderado1" class="form-label bajar-size">Ponderación (%)</label>
+                                        <input type="number" class="form-control" id="ponderado1" placeholder="Ej: 10">
+                                    </div>
+                                </div>
+                                <div class="row fila-notas">
+                                    <div class="col-md-6">
+                                        <label for="nota2" class="form-label bajar-size">Nota 2</label>
+                                        <input type="number" class="form-control" id="nota2" placeholder="Ej: 4.5">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ponderado2" class="form-label bajar-size">Ponderación (%)</label>
+                                        <input type="number" class="form-control" id="ponderado2" placeholder="Ej: 10">
+                                    </div>
+                                </div>
+                                <div class="row fila-notas">
+                                    <div class="col-md-6">
+                                        <label for="nota3" class="form-label bajar-size">Nota 3</label>
+                                        <input type="number" class="form-control" id="nota3" placeholder="Ej: 5.0">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ponderado3" class="form-label bajar-size">Ponderación (%)</label>
+                                        <input type="number" class="form-control" id="ponderado3" placeholder="Ej: 10">
+                                    </div>
+                                </div>
+                                <div class="row fila-notas">
+                                    <div class="col-md-6">
+                                        <label for="nota4" class="form-label bajar-size">Nota 4</label>
+                                        <input type="number" class="form-control" id="nota4" placeholder="Ej: 5.5">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ponderado4" class="form-label bajar-size">Ponderación (%)</label>
+                                        <input type="number" class="form-control" id="ponderado4" placeholder="Ej: 25">
+                                    </div>
+                                </div>
+                                <div class="row fila-notas">
+                                    <div class="col-md-6">
+                                        <label for="nota5" class="form-label bajar-size">Nota 5</label>
+                                        <input type="number" class="form-control" id="nota5" placeholder="Ej: 6.0">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ponderado5" class="form-label bajar-size">Ponderación (%)</label>
+                                        <input type="number" class="form-control" id="ponderado5" placeholder="Ej: 25">
+                                    </div>
+                                </div>
+                                <div class="row fila-notas">
+                                    <div class="col-md-6">
+                                        <label for="nota6" class="form-label bajar-size">Nota 6</label>
+                                        <input type="number" class="form-control" id="nota6" placeholder="Ej: 6.5">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ponderado6" class="form-label bajar-size">Ponderación (%)</label>
+                                        <input type="number" class="form-control" id="ponderado6" placeholder="Ej: 20">
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-primary" type="button" onclick="calcularPromedioNotas()">
+                                    Calcular promedio ponderado
+                                </button>
+                                <button class="btn btn-outline-primary" type="button" onclick="reiniciarInput()">
+                                    Reiniciar
+                                </button>
+                            </div>
+                            <div class="pie-pagina-taller3">
+                                <div class="resultados-taller3">
+                                    <p class="resultados-textos" id="">El promedio del alumno es: </p>
+                                    <p class="resultados-numeros" id="resultadoPromedioPonderado">...</p>
+                                </div>
+                            </div>
+                            <div class="reparar-espacio">
+                                <p></p>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            <!--cierre codigo promedio ponderado-->
+            </div>
+
         </div>
 
         <footer>
@@ -157,5 +288,7 @@
         
         <script src="./figuras.js"></script>
         <script src="./descuentos.js"></script>
+        <script src="./promedio.js"></script>
+        
     </body>
 </html>
