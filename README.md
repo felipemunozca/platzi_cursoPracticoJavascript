@@ -19,5 +19,13 @@ Curso de javascript instruido por Juan David Castro
 
 - Primer paso: definir las formulas
 - Segundo paso: implementar las formulas en JavaScript 
-- Tercer paso: crear funciones para que las formulas matematicas.
+- Tercer paso: crear funciones para que las formulas matemáticas.
 - Cuarto paso: integrar JavaScript con HTML
+
+## Taller N° 4: Análisis salarial
+
+- Primer paso: definir las formulas
+- Segundo paso: implementar las formulas en JavaScript 
+- Tercer paso: crear funciones para utilizar mediana, media y promedio. Junto a sort, reduce y nuevos términos.
+- Cuarto paso: integrar JavaScript con HTML
+

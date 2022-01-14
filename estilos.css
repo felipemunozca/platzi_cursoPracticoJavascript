@@ -16,7 +16,7 @@ body{
         width: 100%;
         height: 30%;
         display: grid;
-        background-color: #47cfac
+        background-color: #47cfac;
     }
     .cabecera h1 {
         font-family: 'Roboto mono', monospace;
@@ -283,8 +283,30 @@ body{
 }
 
 
-
-
+/********************************/
+/* SECCION SALARIOS.HTML */
+/********************************/
+.cabecera-sal {
+    width: 100%;
+    height: 30%;
+    display: grid;
+    background-color: #6b190ad3;
+}
+.cabecera-sal h1 {
+    font-family: 'Roboto mono', monospace;
+    font-size: 30px;
+    font-weight: 700px;
+    letter-spacing: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.cabecera-sal p {
+    font-size: 20px;
+    font-weight: 400px;
+    color: white;
+    text-align: center;
+}
 
 
 

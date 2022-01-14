@@ -20,7 +20,7 @@ function calcularPrecioMenosDescuento() {
     
 
     const resultadoPrecio = document.getElementById("resultadoPrecio");
-    resultadoPrecio.innerText = "El precio con descuento es de: $" + precioFinal;
+    resultadoPrecio.innerText = "El precio final aplicando el descuento es de: $" + precioFinal;
 
 };
 
@@ -84,7 +84,7 @@ const cupones = [
     const precioFinalCupon = calcularPrecioConDescuento(precioValor, descuento);
 
     const resultadoPrecioCupon = document.getElementById("resultadoPrecioCupon");
-    resultadoPrecioCupon.innerText = "El precio con descuento es de: $" + precioFinalCupon;
+    resultadoPrecioCupon.innerText = "El precio final aplicando el descuento es de: $" + precioFinalCupon;
 
 };
 
