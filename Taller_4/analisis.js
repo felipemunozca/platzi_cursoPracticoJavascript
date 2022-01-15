@@ -87,3 +87,103 @@ console.log({
     medianaGeneralCol,
     medianaTop10Col,
 });
+
+/**
+ * 
+ * DESAFIO:
+ * integrar el codigo con HTML para ver las respuestas en el fomulario y no solo en la consola.
+ * 
+ */
+
+function desafioCalcularSalarios(){
+    
+    const entradaMediana = document.getElementById("inputSalarios");
+    
+    const medianaValue = entradaMediana.value;
+    
+    let arrayMediana = Array.from(medianaValue.split(","), Number);
+    
+    const lista = arrayMediana.sort((numMenor, numMayor) => numMenor - numMayor);
+
+    function medianaSalarios() {
+    
+        const mitad = parseInt(lista.length / 2);
+    
+        if (esPar(lista.length)) {
+    
+            const personitaMitad1 = lista[mitad - 1];
+            const personitaMitad2 = lista[mitad];
+            const mediana = calcularMedianaAritmetica([personitaMitad1, personitaMitad2]);
+            return mediana;
+    
+        } else {
+    
+            const personitaMitad = lista[mitad];
+            return personitaMitad;
+    
+        }
+    }
+
+    const medianaGeneral = medianaSalarios();
+
+    const mostrarResultado = document.getElementById("resultadoSalarios");
+    
+    mostrarResultado.innerText = " " + medianaGeneral  + " pesos";
+
+}
+
+function desafioCalcularDiezPorciento(){
+    
+    const entradaMediana = document.getElementById("inputSalarios");
+
+    const medianaValue = entradaMediana.value;
+
+    let arrayMediana = Array.from(medianaValue.split(","), Number);
+    
+    const listaOrdenada = arrayMediana.sort(
+        function (salaryA, salaryB) {
+            return salaryA - salaryB;
+        }
+    );
+
+    function medianaSalariosPais(recibeLista) {
+    
+        const mitad = parseInt(recibeLista.length / 2);
+    
+        if (esPar(recibeLista.length)) {
+    
+            const personitaMitad1 = recibeLista[mitad - 1];
+            const personitaMitad2 = recibeLista[mitad];
+            const mediana = calcularMedianaAritmetica([personitaMitad1, personitaMitad2]);
+            return mediana;
+    
+        } else {
+    
+            const personitaMitad = recibeLista[mitad];
+            return personitaMitad;
+    
+        }
+    }
+
+    const spliceInicio = (listaOrdenada.length * 90) / 100;
+
+    const spliceCantidad = listaOrdenada.length - spliceInicio;
+
+    const salariosPaisTop10 = listaOrdenada.splice(
+        spliceInicio, 
+        spliceCantidad,
+    );
+
+    const medianaTop10 = medianaSalariosPais(salariosPaisTop10);
+
+    const mostrarResultado = document.getElementById("resultadoDiezPorciento");
+    
+    mostrarResultado.innerText = " " + medianaTop10  + " pesos";
+
+}
+
+function limpiarInput() {
+    document.getElementById("inputSalarios").value = "";
+    document.getElementsByClassName("resultadoSalarios").value = "...";
+    document.getElementsByClassName("resultadoDiezPorciento").value = "...";
+};

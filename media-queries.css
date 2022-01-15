@@ -14,3 +14,12 @@
         max-width: 95%;
     }
 }
+
+/*=====================================
+==ESTILOS PARA DESAFIOS.HTML==
+=====================================*/
+@media (max-width: 770px) {
+    .reparar-espacio > p {
+        padding-bottom: 40px;
+    }
+}
