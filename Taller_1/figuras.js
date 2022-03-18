@@ -46,13 +46,18 @@
     }
 
 // Aqui se interactua con el html
+// Funciones para calcular medidas del cuadrado
 function calcularPerimetroCuadrado() {
     const input = document.getElementById("inputCuadrado");
     const value = input.value;
     const respuestaPerimetro = document.getElementById("pResultCua");
-
-    const perimetro = perimetroCuadrado(value);
-    respuestaPerimetro.innerHTML = perimetro.toFixed(2) + " cm";
+    
+    if(inputCuadrado.value == '') {
+        alert('El Lado del cuadrado no puede ir vacio.');
+    } else {
+        const perimetro = perimetroCuadrado(value);
+        respuestaPerimetro.innerHTML = perimetro.toFixed(2) + " cm";
+    }
 };
 
 function calcularAreaCuadrado() {
@@ -60,64 +65,90 @@ function calcularAreaCuadrado() {
     const value = input.value;
     const resultadoArea = document.getElementById("aResultCua");
 
-    const area = areaCuadrado(value);
-    resultadoArea.innerHTML = area.toFixed(2) + " cm";
+    if(inputCuadrado.value == '') {
+        alert('El Lado del cuadrado no puede ir vacio.');
+    } else {
+        const area = areaCuadrado(value);
+        resultadoArea.innerHTML = area.toFixed(2) + " cm";
+    }
 };
 
+// Funciones para calcular medidas del triangulo
 function calcularPerimetroTriangulo() {
     const inputLado1 = document.getElementById("inputLado1");
     const inputLado2 = document.getElementById("inputLado2");
     const inputBase = document.getElementById("inputBase");
     const resultadoPerimetroT = document.getElementById("pResultTri");
+    
+    if(inputLado1.value == '' || inputLado2.value == '' || inputBase.value == '') {
+        alert('El lado 1 o lado 2 o base del triangulo no pueden ir vacios.');
+    } else {
+        const iL1 = parseInt(inputLado1.value);
+        const iL2 = parseInt(inputLado2.value);
+        const iB = parseInt(inputBase.value);
+        const perimetroT = perimetroTriangulo(iL1, iL2, iB);
 
-    const iL1 = parseInt(inputLado1.value);
-    const iL2 = parseInt(inputLado2.value);
-    const iB = parseInt(inputBase.value);
-    const perimetroT = perimetroTriangulo(iL1, iL2, iB);
-
-    resultadoPerimetroT.innerHTML = perimetroT.toFixed(2) + " cm";
+        resultadoPerimetroT.innerHTML = perimetroT.toFixed(2) + " cm";
+    }
 };
 
 function calcularAreaTriangulo() {
     const inputBase = document.getElementById("inputBase");
     const inputAltura = document.getElementById("inputAltura");
     const resultadoAreaT = document.getElementById("aResultTri");
-
-    const iB = inputBase.value;
-    const iA = inputAltura.value;
-    const areaT = areaTriangulo(iB, iA);
     
-    resultadoAreaT.innerHTML = areaT.toFixed(2) + " cm";
+    if(inputBase.value == '' || inputAltura.value == '') {
+        alert('La base o altura del triangulo no pueden ir vacios.');
+    } else {
+        const iB = inputBase.value;
+        const iA = inputAltura.value;
+        const areaT = areaTriangulo(iB, iA);
+        
+        resultadoAreaT.innerHTML = areaT.toFixed(2) + " cm";
+    }
 };
 
+// Funciones para calcular medidas del circulo
 function calcularDiametroCirculo() {
     const inputCirculo = document.getElementById("inputCirculo");
     const resultadoDiametroCi = document.getElementById("dResultCir");
 
-    const iC = parseInt(inputCirculo.value);
-    const diametroCi = diametroCirculo(iC);
+    if(inputCirculo.value == '') {
+        alert('El radio del circulo no pueden ir vacio.');
+    } else {
+        const iC = parseInt(inputCirculo.value);
+        const diametroCi = diametroCirculo(iC);
 
-    resultadoDiametroCi.innerHTML = diametroCi.toFixed(2) + " cm";
+        resultadoDiametroCi.innerHTML = diametroCi.toFixed(2) + " cm";
+    }
 };
 
 function calcularPerimetroCirculo() {
     const inputCirculo = document.getElementById("inputCirculo");
     const resultadoPerimetroCi = document.getElementById("pResultCir");
 
-    const iC = parseInt(inputCirculo.value);
-    const perimetroCi = perimetroCirculo(iC);
+    if(inputCirculo.value == '') {
+        alert('El radio del circulo no pueden ir vacio.');
+    } else {
+        const iC = parseInt(inputCirculo.value);
+        const perimetroCi = perimetroCirculo(iC);
 
-    resultadoPerimetroCi.innerHTML = perimetroCi.toFixed(2) + " cm";
+        resultadoPerimetroCi.innerHTML = perimetroCi.toFixed(2) + " cm";
+    }
 };
 
 function calcularAreaCirculo() {
     const inputCirculo = document.getElementById("inputCirculo");
     const resultadoAreaCi = document.getElementById("aResultCir");
 
-    const iC = parseInt(inputCirculo.value);
-    const areaCi = areaCirculo(iC);
+    if(inputCirculo.value == '') {
+        alert('El radio del circulo no pueden ir vacio.');
+    } else {
+        const iC = parseInt(inputCirculo.value);
+        const areaCi = areaCirculo(iC);
 
-    resultadoAreaCi.innerHTML = areaCi.toFixed(2) + " cm";
+        resultadoAreaCi.innerHTML = areaCi.toFixed(2) + " cm";
+    }
 };
 
 /**
@@ -133,19 +164,24 @@ function calcularAlturaTrianguloIsosceles() {
     const il2 = parseInt(isoLado2.value);
     const ilb = parseInt(isoBase.value);
 
-    if (il1 != il2) {
-        alert("Los lados 1 y 2 NO son iguales");
-    } else if (il2 == ilb) {
-        alert("La base no puede ser igual a los lados");
+    if(isoLado1.value == '' || isoLado2.value == '' || isoBase.value == '') {
+        alert('El lado 1 o lado 2 o base del triangulo no pueden ir vacios.');
     } else {
-        
-        const lado2 = trianguloPequenoLado2(ilb);
-        const ladoBase = trianguloPequenoLadoBase(il1);
-        const lado1 = trianguloPequenoLado1(il1, ilb);
+        if (il1 != il2) {
+            alert("Los lados 1 y 2 NO son iguales");
+        } else if (il2 == ilb) {
+            alert("La base no puede ser igual a los lados");
+        } else {
+            
+            const lado2 = trianguloPequenoLado2(ilb);
+            const ladoBase = trianguloPequenoLadoBase(il1);
+            const lado1 = trianguloPequenoLado1(il1, ilb);
 
-        const resultadoAlturaIso = document.getElementById("alturaResultTri");
-        resultadoAlturaIso.innerHTML = lado1.toFixed(2) + " cm";
+            const resultadoAlturaIso = document.getElementById("alturaResultTri");
+            resultadoAlturaIso.innerHTML = lado1.toFixed(2) + " cm";
+        }
     }
+    
 };
 
 

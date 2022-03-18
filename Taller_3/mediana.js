@@ -50,55 +50,61 @@ if (esPar(lista1.length)) {
  * En la próxima clase vamos a utilizar el método .sort enviando como argumento una función anónima que le indique a JavaScript cómo ordenar nuestra lista de números (ya no solo por sus primeros números, sino por sus valores reales).
  */
 
- var numbers = [10, 6, 4, 2, 5, 1, 3];
- numbers.sort(function(a, b) {
-   return a - b;
- });
- console.log(numbers);
+var numbers = [10, 6, 4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+    return a - b;
+});
+console.log(numbers);
 
 
- function desafioCalcularMediana() {
+function desafioCalcularMediana() {
 
     //Se captura los datos del html y se guardan los valores dentro de una variable
     const entradaMediana = document.getElementById("inputMediana");
     const medianaValue = entradaMediana.value;
-    
-    //Al ser un String los valores capturados, se procede a convertir el formato a Number 
-    let arrayMediana = Array.from(medianaValue.split(","), Number);
-    
-    //Ordenamos los valores de la lista desordenada mediante el metodo sort() de menor a mayor
-    const listaOrdenada = arrayMediana.sort((numMenor, numMayor) => numMenor - numMayor);
-    
-    //Hallamos la mitad de la cantidad de elemento de mi lista obtenida del HTML y lo redondeamos en caso sea decimal con la funcion parseInt()
-    const mitadLista = parseInt(listaOrdenada.length / 2);
-    
-    //Creamos la funcion listaPar para verificar si la lista es par o impar
-    function listaPar(numeros) {
-        if (numeros % 2 === 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    
-    let medianaDesafio;
-    
-    //Si la lista es par procedemos hallar la mediana mediante esta forma de lo contrario seguiriamos con el else
-    if (listaPar(listaOrdenada.length)) {
-        const desafioElemento1 = listaOrdenada[mitadLista - 1];
-        const desafioElemento2 = listaOrdenada[mitadLista];
 
-    //Llamamos a la funcion calcularMediaAritmetica() con los elementos1 y elementos2 como parametros y lo guardamos como la variable mediana
-        const desafioPromedioElemento1y2 = calcularMedianaAritmetica([desafioElemento1, desafioElemento2]);
-        medianaDesafio = desafioPromedioElemento1y2;
+    if (entradaMediana.value == '') {
+        alert('Debe ingresar dos o mas numeros para poder calcular la mediana.');
     } else {
-        medianaDesafio = listaOrdenada[mitadLista];
+
+        //Al ser un String los valores capturados, se procede a convertir el formato a Number 
+        let arrayMediana = Array.from(medianaValue.split(","), Number);
+        
+        //Ordenamos los valores de la lista desordenada mediante el metodo sort() de menor a mayor
+        const listaOrdenada = arrayMediana.sort((numMenor, numMayor) => numMenor - numMayor);
+        
+        //Hallamos la mitad de la cantidad de elemento de mi lista obtenida del HTML y lo redondeamos en caso sea decimal con la funcion parseInt()
+        const mitadLista = parseInt(listaOrdenada.length / 2);
+        
+        //Creamos la funcion listaPar para verificar si la lista es par o impar
+        function listaPar(numeros) {
+            if (numeros % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        let medianaDesafio;
+        
+        //Si la lista es par procedemos hallar la mediana mediante esta forma de lo contrario seguiriamos con el else
+        if (listaPar(listaOrdenada.length)) {
+            const desafioElemento1 = listaOrdenada[mitadLista - 1];
+            const desafioElemento2 = listaOrdenada[mitadLista];
+
+        //Llamamos a la funcion calcularMediaAritmetica() con los elementos1 y elementos2 como parametros y lo guardamos como la variable mediana
+            const desafioPromedioElemento1y2 = calcularMedianaAritmetica([desafioElemento1, desafioElemento2]);
+            medianaDesafio = desafioPromedioElemento1y2;
+        } else {
+            medianaDesafio = listaOrdenada[mitadLista];
+        }
+        
+        //Enviamos los resultados obtenidos a la pagina html para su visualizacion
+        const mostrarResultado = document.getElementById("resultadoMediana");
+        
+        mostrarResultado.innerText = " " + medianaDesafio;
     }
-    
-    //Enviamos los resultados obtenidos a la pagina html para su visualizacion
-    const mostrarResultado = document.getElementById("resultadoMediana");
-    
-    mostrarResultado.innerText = " " + medianaDesafio;
+
 }
 
 function limpiarInput() {

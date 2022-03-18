@@ -64,14 +64,20 @@ function desafioCalcularPromedio() {
 
     const entradaPromedio = document.getElementById("inputPromedio");
     const promedioValores = entradaPromedio.value.split(',');
-    
-    for(let i = 0; i < promedioValores.length; i++){
-        promedioValores[i] = parseInt(promedioValores[i]);
+
+    if (entradaPromedio.value == '') {
+        alert('Debe ingresar dos o mas numeros para poder calcular el promedio.');
+    } else {
+
+        for(let i = 0; i < promedioValores.length; i++){
+            promedioValores[i] = parseInt(promedioValores[i]);
+        }
+
+        const resultado = calcularPromedio(promedioValores);
+        const mostrarResultado = document.getElementById("resultadoPromedio");
+        mostrarResultado.innerText = " " + resultado;
+
     }
-   
-    const resultado = calcularPromedio(promedioValores);
-    const mostrarResultado = document.getElementById("resultadoPromedio");
-    mostrarResultado.innerText = " " + resultado;
 
 }
 

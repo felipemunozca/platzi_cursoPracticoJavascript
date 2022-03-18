@@ -98,37 +98,34 @@ console.log({
 function desafioCalcularSalarios(){
     
     const entradaMediana = document.getElementById("inputSalarios");
-    
     const medianaValue = entradaMediana.value;
     
-    let arrayMediana = Array.from(medianaValue.split(","), Number);
-    
-    const lista = arrayMediana.sort((numMenor, numMayor) => numMenor - numMayor);
+    if (entradaMediana.value == '') {
+        alert('Debe ingresar dos o mas valores para poder realizar el calculo.');
+    } else {
 
-    function medianaSalarios() {
-    
-        const mitad = parseInt(lista.length / 2);
-    
-        if (esPar(lista.length)) {
-    
-            const personitaMitad1 = lista[mitad - 1];
-            const personitaMitad2 = lista[mitad];
-            const mediana = calcularMedianaAritmetica([personitaMitad1, personitaMitad2]);
-            return mediana;
-    
-        } else {
-    
-            const personitaMitad = lista[mitad];
-            return personitaMitad;
-    
+        let arrayMediana = Array.from(medianaValue.split(","), Number);
+        const lista = arrayMediana.sort((numMenor, numMayor) => numMenor - numMayor);
+        function medianaSalarios() {
+        
+            const mitad = parseInt(lista.length / 2);
+        
+            if (esPar(lista.length)) {
+                const personitaMitad1 = lista[mitad - 1];
+                const personitaMitad2 = lista[mitad];
+                const mediana = calcularMedianaAritmetica([personitaMitad1, personitaMitad2]);
+                return mediana;
+            } else {
+                const personitaMitad = lista[mitad];
+                return personitaMitad;
+            }
         }
+
+        const medianaGeneral = medianaSalarios();
+        const mostrarResultado = document.getElementById("resultadoSalarios");
+        mostrarResultado.innerText = " " + medianaGeneral  + " pesos";
+
     }
-
-    const medianaGeneral = medianaSalarios();
-
-    const mostrarResultado = document.getElementById("resultadoSalarios");
-    
-    mostrarResultado.innerText = " " + medianaGeneral  + " pesos";
 
 }
 

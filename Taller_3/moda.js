@@ -80,13 +80,20 @@ function desafioCalcularModa() {
     const entradaModa = document.getElementById("inputModa");
     const modaValores = entradaModa.value.split(',');
 
-    for(let i = 0; i < modaValores.length; i++){
-        modaValores[i] = parseInt(modaValores[i]);
+    if (entradaModa.value == '') {
+        alert('Debe ingresar dos o mas numeros para poder calcular la moda.');
+    } else {
+        
+        for(let i = 0; i < modaValores.length; i++){
+            modaValores[i] = parseInt(modaValores[i]);
+        }
+
+        const resultado = calcularModa(modaValores);
+        const mostrarResultado = document.getElementById("resultadoModa");
+        mostrarResultado.innerText = " " + resultado;
     }
 
-    const resultado = calcularModa(modaValores);
-    const mostrarResultado = document.getElementById("resultadoModa");
-    mostrarResultado.innerText = " " + resultado;
+
 
 }
 
